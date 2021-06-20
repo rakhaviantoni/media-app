@@ -1,0 +1,72 @@
+{
+  "name": "media-app",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "bootstrap": "^4.5.3",
+    "eslint": "^6.8.0",
+    "html-react-parser": "^0.13.0",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-responsive-masonry": "^2.1.3",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "start": "webpack-dev-server -d --env=development",
+    "build:production": "cross-env NODE_ENV=production webpack --progress --hide-modules --env=production",
+    "build:development": "webpack -d --env=development",
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "npm run transpile",
+    "deploy:production": "./deploy.sh"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "babel-loader": "^8.2.1",
+    "babel-plugin-transform-jsx-css-modules": "^1.0.0",
+    "babel-plugin-transform-react-pug": "^7.0.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^3.6.0",
+    "csso-webpack-plugin": "^2.0.0-beta.1",
+    "dotenv": "^8.2.0",
+    "eslint-plugin-react-pug": "^0.8.4",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "netlify-cli": "^3.37.37",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^8.0.2",
+    "terser-webpack-plugin": "^3.1.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

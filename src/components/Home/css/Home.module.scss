@@ -1,0 +1,77 @@
+@import "Color";
+body {
+  overflow-x: hidden;
+  font-family: DM-Sans;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.Home {
+  position: relative;
+  width: 100%;
+  
+  &__Content {
+    padding: 30px 80px!important;
+    min-height: 100vh;
+  }
+
+  &__Navbar {
+    padding: 12px;
+    height: 56px;
+    background: $white;
+    box-shadow: 0 10px 6px -6px rgba(102,113,123,.5);
+  }
+
+  &__NavbarRight {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__NavbarSearch {
+    position: relative;
+
+    &_SearchBar {
+      background: $light-grey;
+      border: 0;
+      border-radius: 30px;
+      height: 36px;
+      padding-left: 50px;
+
+      &_Logo {
+        position: absolute;
+        color: $dark-grey;
+        left: -10px;
+        top: 10px;
+        padding: 0px 15px 45px 30px;
+      }
+    }
+  }
+
+  &__NavbarMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_Icon {
+      color: $dark-grey;
+      width: 26px;
+    }
+
+    &_Avatar {
+      height: 26px;
+      width: 26px;
+      border-radius: 15px;
+    }
+  }
+
+  &__Image {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+  }
+
+  &__Null_Content {
+    display: grid;
+    justify-items: center;
+  }
+}
