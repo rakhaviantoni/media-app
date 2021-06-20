@@ -13,6 +13,10 @@ body {
   &__Content {
     padding: 30px 80px!important;
     min-height: 100vh;
+
+    @media only screen and (max-width: 768px) {
+      padding: 30px!important;
+    }
   }
 
   &__Navbar {
@@ -55,6 +59,10 @@ body {
     &_Icon {
       color: $dark-grey;
       width: 26px;
+
+      @media only screen and (max-width: 768px) {
+        width: 18px;
+      }
     }
 
     &_Avatar {
